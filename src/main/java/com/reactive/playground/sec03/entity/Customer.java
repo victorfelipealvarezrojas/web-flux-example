@@ -1,18 +1,11 @@
-package com.reactive.playground.sec02.entity;
-
+package com.reactive.playground.sec03.entity;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
-import org.springframework.data.relational.core.mapping.Table;
 
-/*
-    We do not have @Entity in R2DBC.
- */
-@Table("customer")
+
 public class Customer {
     @Id
     private Integer id;
-    @Column("name")
     private String name;
     private String email;
 

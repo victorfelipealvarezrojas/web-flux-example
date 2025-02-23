@@ -21,7 +21,7 @@ public class Lec01CustomerRepositoryTest extends AbstractTest{
         this.customerRepository
                 .findAll()
                 .doOnNext(c -> log.info("Customer: {}", c))
-                .as(StepVerifier::create)
+                .as(StepVerifier::create) // StepVerifier es una utilidad de testing de Reactor que permite verificar el comportamiento de flujos reactivos
                 .expectNextCount(10)
                 .expectComplete()
                 .verify();
